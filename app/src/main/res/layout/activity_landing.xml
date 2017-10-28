@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.naman.dev.serializrdemo.LandingActivity">
+    <TextView
+        android:id="@+id/locationTextView"
+        android:textSize="24sp"
+        android:layout_height="400dp"
+        android:layout_width="match_parent"/>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <Button
+            android:id="@+id/redeembtn"
+            android:layout_margin="8dp"
+            android:text="Redeem"
+            android:layout_width="wrap_content"
+            android:layout_weight="5"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/logout_btn"
+            android:layout_margin="8dp"
+            android:text="Logout"
+            android:layout_width="wrap_content"
+            android:layout_weight="5"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</LinearLayout>
