@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
 import com.hypertrack.lib.HyperTrack;
 import com.hypertrack.lib.callbacks.HyperTrackCallback;
 import com.hypertrack.lib.models.ErrorResponse;
@@ -27,7 +26,7 @@ public class LandingActivity extends AppCompatActivity {
         setTitle("Landing Activity");
         // Initialize UI Views
         initUIViews();
-        Gson gson;
+
         HyperTrack.requestPermissions(this);
         HyperTrack.requestLocationServices(this);
         HyperTrack.getCurrentLocation(new HyperTrackCallback() {
@@ -36,8 +35,6 @@ public class LandingActivity extends AppCompatActivity {
                 location = (Location) successResponse.getResponseObject();
                 Toast.makeText(LandingActivity.this, "LOCATION" + location.toString(), Toast.LENGTH_LONG).show();
                 locationTextView.setText("Latitude is: " + location.getLatitude() + "\nLongitude is:" + location.getLongitude());
-                String url = "http://maps.googleapis.com/maps/api/distancematrix/json?origins=28.5450,77.1926&destinations=" + location.getLatitude() + "," + location.getLongitude() + "&mode=driving&language=en-EN&sensor=false";
-                
             }
 
             @Override
